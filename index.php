@@ -156,7 +156,7 @@ $qid = $inline_query->id;
 $fatime = date('H:i', strtotime('2 hour'));
 // Bu kod @Strongest0305 tomondan @Hacker_Qasoskorlar uchun qayta tuzildi. 
 $fadate = date('d-M Y',strtotime('2 hour'));
-$join = file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@$mychannel&user_id=".$from_id);
+$join = file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=@Kinouniverse&user_id=".$from_id);
 // Bu kod @Strongest0305 tomondan @Hacker_Qasoskorlar uchun qayta tuzildi. 
 if($chatsMS && (strpos($join,'"status":"left"') or strpos($join,'"Bad Request: vvssr"') or strpos($join,'"status":"kicked"'))!== false){
 bot('sendMessage', [
@@ -165,12 +165,12 @@ bot('sendMessage', [
 
 🌟┇Botdan to'liq foydalanish uchun kanalimizga a'zo bo'ling!
 
-📡┇Kanal: @$mychannel
+📡┇Kanal: @KinoUniverse
 
 📌┇ A'zo bo'lib /start ni bosing!",
 'reply_to_message_id'=>$msid,
 'reply_markup' => json_encode(['inline_keyboard' => [
-[['text' => "🔥A'zo bo'lish🔥", 'url' => "t.me/$mychannel"]],]])
+[['text' => "🔥A'zo bo'lish🔥", 'url' => "t.me/Kinouniverse"]],]])
 ]);return false;}
 
 // Bu kod @Strongest0305 tomondan @Hacker_Qasoskorlar uchun qayta tuzildi. 
@@ -1590,15 +1590,10 @@ Misol: @$mychannel",
         bot('sendMessage', [
             'chat_id' => "@$mychannel",
             'text' => "🔰MAXSUS KOD!🔰
-
 💎Homiy: @KINOUNIVERSE
-
 🔰Kod: $codes
-
 💰Tanga miqdori: $codes2
-
 ⌚Vaqti: $fatme
-
 ❗Koddan faqatgina bir marta foydalanish mumkin. ",
             ]);
         
